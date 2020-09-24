@@ -1,5 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
+<<<<<<< HEAD
   User: shiyi
   Date: 2020/9/24
   Time: 9:43
@@ -10,11 +11,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
+
+<%@ page contentType="text/html;charset=UTF-8" %>
+
 <html>
 <head>
     <title>Title</title>
 </head>
-<script src="static/js/jquery-1.12.4.js"></script>
+
+<script src="/statics/js/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="/statics/js/list.js"></script>
 <body>
 <form action="/" method="post">
@@ -31,16 +36,16 @@
             <td>操作</td>
         </tr>
         <c1:forEach items="${pageInfo}" var="item">
-        <tr align="center">
-            <td>${item.name }</td>
-            <td>${item.author }</td>
-            <td>${item.publish }</td>
-            <td><fmt:formatDate pattern="yyyy-MM-dd" value="${item.publishdate}" type="both"/></td>
-            <td>${item.page }</td>
-            <td>${item.price }</td>
-            <td>${item.content }</td>
-            <td><a href=" ">修改</a>  ||  <a href="javascript:void(0)" onclick="del(${item.id})">删除</a></td>
-        </tr>
+            <tr align="center">
+                <td>${item.name }</td>
+                <td>${item.author }</td>
+                <td>${item.publish }</td>
+                <td><fmt:formatDate pattern="yyyy-MM-dd" value="${item.publishdate}" type="both"/></td>
+                <td>${item.page }</td>
+                <td>${item.price }</td>
+                <td>${item.content }</td>
+                <td><a href=" ">修改</a>  ||  <a href="javascript:void(0)" onclick="del(${item.id})">删除</a></td>
+            </tr>
         </c1:forEach>
     </table>
     <table class="table" width="800" border="1" align="center">
@@ -56,5 +61,9 @@
     </table>
 
 </form>
+
+<body>
+<h1>${UserSession.nickname}</h1>
+
 </body>
 </html>
